@@ -103,7 +103,7 @@ class NullableIntSerializerTests : FunSpec({
 
         jsonStringNullInt shouldBe """{"value":0}"""
 
-        val zeroInt2 = json.parse(Int.serializer().nullable, jsonStringNullInt)
+        val zeroInt2 = json.parse(ClassWithNullableInt.serializer(), jsonStringNullInt)
 
         zeroInt2 shouldBe zeroInt
     }

@@ -18,3 +18,7 @@ dependencies {
     testImplementation("io.kotest:kotest-property-jvm:4.1.2") // for kotest property test
     testImplementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.20.0")
 }
+
+tasks.withType<Test> {
+    useJUnitPlatform()
+}
